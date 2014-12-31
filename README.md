@@ -4,6 +4,12 @@ Dotfiles of MyChaOS87
 Based on [Dotbot][dotbot] for bootstrapping an using [Dotbot Dotfiles
 Template][dotfiles_template] as skeleton.
 
+Needed Packages (on Debian Jessie)
+----------------------------------
+Packages needed or helpful (incomplete List)
+``` aptitude
+    sudo aptitude install git mercurial golang gocode curl exuberant-ctags fonts-powerline vim zsh
+```
 
 License
 -------
