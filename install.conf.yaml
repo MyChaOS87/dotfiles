@@ -3,12 +3,14 @@
 - link:
     ~/.gtkrc-2.0: gtkrc-2.0
     ~/.vimrc.before.local: vimrc.before.local
+    ~/.zshenv: zshenv
     ~/.zshrc:
         force: true
         path: zshrc
     ~/.zsh_custom: zsh_custom/
 
 - shell:
+    - ["mkdir -p $HOME/go/bin $HOME/go/pkg $HOME/go/src", "prepare go workspace"]
     - ["wget --no-check-certificate http://install.ohmyz.sh -O - | sh", "Installing oh-my-zsh"]
     - ["curl http://j.mp/spf13-vim3 -L -o - | sh", "Installing vim-spf13"]
 
