@@ -1,0 +1,44 @@
+## Fixing broken colorscheme when using meld with a drak theme
+
+style "meld-color-scheme-user"
+{
+# inserted line(s), also edge color block for added file in dir diff
+color["insert-bg"] = "#006000"
+color["insert-outline"] = shade(1.5, @insert-bg)
+# In dir diff, an added file's name
+color["insert-text"] = "white"
+ 
+# Color block on edge for missing file in dir diff
+color["delete-bg"] = "#800000"
+color["delete-outline"] = shade(1.8, @delete-bg)
+# Not sure what this is for
+color["delete-text"] = "white"
+ 
+# Changed line(s), and edge color block for changed file in dir diff
+color["replace-bg"] = "#25507C"
+color["replace-outline"] = shade(1.8, @replace-bg)
+# Changed file in dir diff
+color["replace-text"] = "white"
+ 
+# Not sure what these are for
+color["conflict-bg"] = "#722534"
+color["conflict-outline"] = shade(1.8, @conflict-bg)
+color["conflict-text"] = "white"
+ 
+# Not sure what these are for
+color["error-bg"] = "#9F1849"
+color["error-outline"] = shade(1.8, @error-bg)
+color["error-text"] = "white"
+ 
+# Added text on an existing changed line (per-word diffing)
+color["inline-bg"] = "#305030" # shade(1.3, @replace-bg)
+color["inline-fg"] = "white"
+ 
+# Crossed-out (not present) file in dir diff view
+color["unknown-text"] = "#e0e0e0"
+ 
+color["syncpoint-outline"] = "Yellow"
+# Currently selected chunk. Note: seems to automatically be blended with underlying color.
+color["current-chunk-highlight"] = "#4A4A4A"
+}
+widget "meldapp.*" style : highest "meld-color-scheme-user"
