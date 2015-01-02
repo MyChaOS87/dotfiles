@@ -3,18 +3,19 @@
 - link:
     ~/.gtkrc-2.0: gtkrc-2.0
     ~/.vimrc.before.local: vimrc.before.local
-    ~/.zshenv: zshenv
-    ~/.zshrc:
-        force: true
-        path: zshrc
-    ~/.zsh_custom: zsh_custom/
 
 - shell:
     - ["mkdir -p $HOME/go/bin $HOME/go/pkg $HOME/go/src", "prepare go workspace"]
     - ["wget --no-check-certificate http://install.ohmyz.sh -O - | sh", "Installing oh-my-zsh"]
     - ["curl http://j.mp/spf13-vim3 -L -o - | sh", "Installing vim-spf13"]
-    - ["vim +BundleInstall! +BundleClean +qall", "Updating vim plugins"]
+    - ["vim +BundleInstall! +BundleClean! +qall", "Updating vim plugins"]
     - ["FOLDER=`pwd` ; ( cd ~/.spf13-vim-3/.vim/bundle/YouCompleteMe/ && ./install.sh --clang-completer && cd $FOLDER ) || ( cd $FOLDER ; false ) ", "Compiling YouCompleteMe binary"]
     - ["vim +GoInstallBinaries +q", "Installing binaries needed for vim-go"]
 
+- link:
+    ~/.zshenv: zshenv
+    ~/.zshrc:
+        force: true
+        path: zshrc
+    ~/.zsh_custom: zsh_custom/
 
