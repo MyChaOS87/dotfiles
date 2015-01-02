@@ -7,7 +7,7 @@ local INTERFACE_COLOR=`echo -e "\e[1m\e[38;5;32m"`
 local INTERFACE_DOWN_COLOR=`echo -e "\e[1m\e[38;5;124m"`
 local LINK_COLOR=`echo -e "\e[38;5;72m"`
 
-function colored_ip () {
+function ip () {
     $IP_CMD $@ | sed \
     -e "s/inet [^ ]\+ /${IPV4_COLOR}&${reset_color}/g"\
     -e "s/inet6 [^ ]\+ /${IPV6_COLOR}&${reset_color}/g"\
@@ -17,5 +17,3 @@ function colored_ip () {
     -e "s/^\([0-9]\+: \+\)\([^ \t]\+\)\(.* UNKNOWN .*$\)/\1${INTERFACE_COLOR}\2${reset_color}\3/"\
     -e "s/^\([0-9]\+: \+\)\([^ \t]\+\)\(.* DOWN .*$\)/\1${INTERFACE_DOWN_COLOR}\2${reset_color}\3/"
 }
-
-alias ip=colored_ip

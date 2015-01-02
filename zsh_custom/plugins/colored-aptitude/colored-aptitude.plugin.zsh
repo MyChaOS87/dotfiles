@@ -4,7 +4,7 @@ local INSTALLED_COLOR=$fg[green]
 local DELETED_COLOR=$fg[red]
 local VIRTUAL_COLOR=`echo -e "\e[38;5;242m"`
 
-function colored_aptitude () {
+function aptitude () {
     if [ "$*" = "" ]; then
         $APTITUDE_CMD
         return
@@ -18,4 +18,3 @@ function colored_aptitude () {
     fi
 }
 
-alias aptitude=colored_aptitude
