@@ -58,6 +58,7 @@ plugins=(
     golang
     sudo
     web-search
+    vagrant
     )
 
 source $ZSH/oh-my-zsh.sh
