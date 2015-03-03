@@ -7,4 +7,4 @@ let g:airline_powerline_fonts=1
 "
 " Setup used groups
 "
-let g:spf13_bundle_groups=['general', 'writing', 'programming', 'php', 'python', 'javascript', 'html', 'misc', 'go', "youcompleteme"]
+let g:spf13_bundle_groups=['general', 'writing', 'programming', 'php', 'python', 'javascript', 'html', 'misc', 'go', 'youcompleteme', 'puppet']
