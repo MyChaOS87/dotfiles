@@ -1,6 +1,7 @@
 - clean: ['~']
 
 - link:
+    ~/.gitconfig: gitconfig
     ~/.gtkrc-2.0: gtkrc-2.0
     ~/.vimrc.before.local: vimrc.before.local
 

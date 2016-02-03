@@ -52,10 +52,12 @@ plugins=(
     colorize
     compleat
     dircycle
+    emoji
     git
     git-extra
     git-remote-branch
     golang
+    mvn
     sudo
     web-search
     vagrant
