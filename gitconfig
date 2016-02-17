@@ -25,3 +25,5 @@
 
 [pull]
     
+[url "git+ssh://git@bitbucket.org"]
+	insteadOf = https://bitbucket.org
