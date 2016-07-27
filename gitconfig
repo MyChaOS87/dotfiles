@@ -1,6 +1,11 @@
 [include]
     path = ~/.gitconfig.local
 
+[core]
+    pager = less -iXFR
+    autocrlf = input
+    safecrlf = warn
+
 [color]
     ui = auto
 
@@ -24,6 +29,10 @@
     default = simple
 
 [pull]
-    
+    rebase = preserve
+
 [url "git+ssh://git@bitbucket.org"]
 	insteadOf = https://bitbucket.org
+[diff]
+	renames = copies
+	mnemonicprefix = true
